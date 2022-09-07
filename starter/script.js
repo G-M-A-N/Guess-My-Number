@@ -20,5 +20,8 @@ document.querySelector('.check').addEventListener('click', function () {
   if (!guess) {
     document.querySelector('.message').textContent =
       '♨ You havent picked a number';
+  } else if (privateNumber === guess) {
+    document.querySelector('.message').textContent =
+      'You Guessed The Correct Number';
   }
 });
