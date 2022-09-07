@@ -23,5 +23,8 @@ document.querySelector('.check').addEventListener('click', function () {
   } else if (privateNumber === guess) {
     document.querySelector('.message').textContent =
       'You Guessed The Correct Number';
-  }
+  } else if (privateNumber > guess) {
+    document.querySelector('.message').textContent = 'The Number You Picked is High ☝';
+  }else if (privateNumber < guess) {
+    document.querySelector('.message').textContent = 'The Number You Picked is Low 👇';
 });
