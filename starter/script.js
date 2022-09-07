@@ -11,4 +11,7 @@ document.querySelector('.guess').value = 23;
 
 //******queryy selector is used to select html elements based on their class names or their ID******////
 
-document.querySelector('.check').addEventListener('click');
+document.querySelector('.check').addEventListener('click', function () {
+  const guessvalue = Number(document.querySelector('.guess').value);
+  console.log(typeof guessvalue, guessvalue);
+});
