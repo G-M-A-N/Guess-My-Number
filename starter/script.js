@@ -14,6 +14,8 @@ document.querySelector('.guess').value = 23;
 const privateNumber = Math.trunc(Math.random() * 20 + 1);
 document.querySelector('.number').value = privateNumber;
 
+let score = 20;
+
 document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
 
@@ -26,6 +28,8 @@ document.querySelector('.check').addEventListener('click', function () {
   } else if (guess > privateNumber) {
     document.querySelector('.message').textContent =
       'The Number You Picked is High ☝';
+    score;
+    document.querySelector('.score').te;
   } else if (guess < privateNumber) {
     document.querySelector('.message').textContent =
       'The Number You Picked is Low 👇';
