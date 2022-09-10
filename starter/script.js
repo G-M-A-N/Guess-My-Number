@@ -53,5 +53,5 @@ document.querySelector('.again').addEventListener('click', function () {
   document.querySelector('.message').textContent = 'Start Guessing.......';
   document.querySelector('.highscore').textContent = 0;
   document.querySelector('.guess').value = 0;
-//   document.querySelector('.number').textContent = '?';
+  document.querySelector('.number').textContent = '?';
 // });
