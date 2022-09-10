@@ -12,7 +12,7 @@ document.querySelector('.guess').value = 23;
 //******queryy selector is used to select html elements based on their class names or their ID******////
 
 const privateNumber = Math.trunc(Math.random() * 20 + 1);
-document.querySelector('.number').value = privateNumber;
+document.querySelector('.number').textContent = privateNumber;
 
 let score = 20 || score > 0;
 
@@ -26,21 +26,29 @@ document.querySelector('.check').addEventListener('click', function () {
     document.querySelector('.message').textContent =
       'You Guessed The Correct Number';
     document.querySelector('.highscore').textContent = guess;
+    document.querySelector('body').style.backgroundColor = '#60b347';
+    document.querySelector(.number).style.width = '30rem'
   } else if (guess > privateNumber) {
-    if (score > 0) {
+    if (score > 1) {
       document.querySelector('.message').textContent =
         'The Number You Picked is High ☝';
       score--;
       document.querySelector('.score').textContent = score;
     } else {
-      document.querySelector('.message').textContent = 'You lost';
+      document.querySelector('.message').textContent =
+        'You lost🎃 Try Again 🔁';
+      document.querySelector('.score').textContent = 0;
     }
   } else if (guess < privateNumber) {
-    if (score > 0) {
+    if (score > 1) {
       document.querySelector('.message').textContent =
         'The Number You Picked is Low 👇';
       score--;
       document.querySelector('.score').textContent = score;
+    } else {
+      document.querySelector('.message').textContent =
+        'You lost🎃 Try Again 🔁';
+      document.querySelector('.score').textContent = 0;
     }
   }
 });
