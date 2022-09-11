@@ -48,10 +48,10 @@ document.querySelector('.check').addEventListener('click', function () {
 
 document.querySelector('.again').addEventListener('click', function () {
   document.querySelector('body').style.backgroundColor = '#222';
-  document.querySelector('.score').textContent = 20;
+  let privateNumber = Math.trunc(Math.random() * 20 + 1);
   document.querySelector('.number').style.width = '15rem';
   document.querySelector('.message').textContent = 'Start Guessing.......';
-  document.querySelector('.highscore').textContent = 0;
+  // document.querySelector('.highscore').textContent = 0;
   document.querySelector('.guess').value = 0;
   document.querySelector('.number').textContent = '?';
-// });
+});
