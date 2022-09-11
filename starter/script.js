@@ -23,7 +23,7 @@ document.querySelector('.check').addEventListener('click', function () {
     document.querySelector('.number').textContent = privateNumber;
 
     if (score > highscore) {
-      score = highscore;
+      highscore = score;
       document.querySelector('.highscore').textContent = highscore;
     }
   } else if (guess > privateNumber) {
@@ -53,7 +53,7 @@ document.querySelector('.check').addEventListener('click', function () {
 
 document.querySelector('.again').addEventListener('click', function () {
   document.querySelector('body').style.backgroundColor = '#222';
-  let privateNumber = Math.trunc(Math.random() * 20 + 1);
+  privateNumber = Math.trunc(Math.random() * 20 + 1);
   document.querySelector('.number').style.width = '15rem';
   document.querySelector('.message').textContent = 'Start Guessing.......';
   // document.querySelector('.highscore').textContent = 0;
